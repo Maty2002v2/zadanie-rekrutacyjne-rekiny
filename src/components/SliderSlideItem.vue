@@ -1,12 +1,24 @@
 <template>
-  <div>hii</div>
+  <div>
+    <pre>{{ image }}</pre>
+  </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
+import SliderSlide from "../types/SliderSlide";
 
 export default defineComponent({
   name: "SliderSlideItem",
-  //   setup() {},
+  props: {
+    image: {
+      type: Object as PropType<SliderSlide>,
+    },
+  },
+  setup(props, { emit }) {
+    setInterval(() => {
+      emit("nextSlide");
+    }, 5000);
+  },
 });
 </script>

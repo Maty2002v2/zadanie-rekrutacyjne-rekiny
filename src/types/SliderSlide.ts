@@ -1,8 +1,8 @@
 interface SliderSlide {
-  path: String;
-  header: String;
-  subheader: String;
-  content: String;
+  path: string;
+  header: string;
+  subheader: string;
+  content: string;
 }
 
 export default SliderSlide;
