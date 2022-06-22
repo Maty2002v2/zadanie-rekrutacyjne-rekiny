@@ -4,7 +4,7 @@
       <img
         class="slide-item__bg-img"
         :src="require('@/assets/' + image.nameImage)"
-        :key="image.nameImage"
+        :key="image"
         alt="slider backgraund"
       />
     </Transition>
@@ -13,8 +13,10 @@
     <div class="slide-item__content">
       <h1>{{ image.header }}</h1>
       <h2>{{ image.subheader }}</h2>
+      <slider-timer :time="5" :key="image" />
       <p>{{ image.content }}</p>
     </div>
+
     <button class="slide-item__button">LOREM IPSUM</button>
     <button class="slide-item__button slide-item__button--outline">
       DOLOR SIT AMENT
@@ -24,9 +26,12 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
+
 import SliderSlide from "../types/SliderSlide";
+import SliderTimer from "./SliderTimer.vue";
 
 export default defineComponent({
+  components: { SliderTimer },
   name: "SliderSlideItem",
   props: {
     image: {
@@ -80,7 +85,7 @@ export default defineComponent({
   color: #ffffff;
   width: 170px;
   height: 40px;
-  margin-right: 30px;
+  margin: 30px 30px 0 0;
   font-size: 11px;
   box-sizing: border-box;
   background: #40e17e;
