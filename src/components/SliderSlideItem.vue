@@ -10,9 +10,9 @@
     </Transition>
     <div class="slide-item__darkening"></div>
 
-    <div class="slide-item__content">
-      <h1>{{ image.header }}</h1>
-      <h2>{{ image.subheader }}</h2>
+    <div class="content">
+      <h1 class="content__h1">{{ image.header }}</h1>
+      <h2 class="content__h2">{{ image.subheader }}</h2>
       <slider-timer :time="5" :key="image" />
       <p>{{ image.content }}</p>
     </div>
@@ -66,8 +66,8 @@ export default defineComponent({
 }
 
 .slide-item__bg-img {
-  z-index: -1000;
   opacity: 1;
+  z-index: -1000;
 }
 
 .slide-item__darkening {
@@ -76,24 +76,33 @@ export default defineComponent({
   z-index: -999;
 }
 
-.slide-item__content {
+.content__h1 {
+  margin-bottom: 5px;
+  font-size: 50px;
+}
+
+.content__h2 {
+  margin: 0 0 15px 30px;
+  font-weight: 400;
 }
 
 .slide-item__button {
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
   width: 170px;
   height: 40px;
+  border: none;
+  border-radius: 5px;
   margin: 30px 30px 0 0;
-  font-size: 11px;
   box-sizing: border-box;
+
+  color: #ffffff;
+  font-size: 11px;
+
   background: #40e17e;
 }
 
 .slide-item__button--outline {
-  background: transparent;
   border: 2px solid #40e17e;
+  background: transparent;
 }
 
 .fade-enter-active,

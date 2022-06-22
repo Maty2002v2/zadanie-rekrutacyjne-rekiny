@@ -1,5 +1,8 @@
 <template>
-  <the-slider :images="FETCH_IMAGES" />
+  <div class="container">
+    <nav class="container__navbar">MENU</nav>
+    <the-slider :images="FETCH_IMAGES" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -45,3 +48,17 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.container__navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 29px;
+
+  color: #d8d8d8;
+  font-weight: 900;
+
+  background: #eaeaea;
+}
+</style>

@@ -40,12 +40,11 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .slider {
   position: relative;
   height: 600px;
   padding-top: 120px;
   box-sizing: border-box;
-  /* overflow: hidden; */
 }
 </style>

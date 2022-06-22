@@ -16,7 +16,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .slider-timer {
   width: 350px;
   height: 1px;
