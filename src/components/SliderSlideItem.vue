@@ -41,7 +41,7 @@ export default defineComponent({
   },
   setup(props, { emit }) {
     setInterval(() => {
-      emit("nextSlide");
+      emit("nextSlide"); //TODO:w destroy wyczyscic
     }, 5000);
   },
 });

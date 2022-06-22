@@ -1,5 +1,5 @@
 <template>
-  <div class="slider-timer"><span class="slider-timer--span"></span></div>
+  <div class="slider-timer"><span class="slider-timer__span"></span></div>
 </template>
 
 <script lang="ts">
@@ -23,7 +23,7 @@ export default defineComponent({
   background: #ffffff;
 }
 
-.slider-timer--span {
+.slider-timer__span {
   display: block;
   width: 100%;
   height: 100%;
