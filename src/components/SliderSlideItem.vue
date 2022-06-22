@@ -15,8 +15,10 @@
       <h2>{{ image.subheader }}</h2>
       <p>{{ image.content }}</p>
     </div>
-    <button>DOLOR SIT AMENT</button>
-    <button>LOREM IPSUM</button>
+    <button class="slide-item__button">LOREM IPSUM</button>
+    <button class="slide-item__button slide-item__button--outline">
+      DOLOR SIT AMENT
+    </button>
   </div>
 </template>
 
@@ -72,9 +74,26 @@ export default defineComponent({
 .slide-item__content {
 }
 
+.slide-item__button {
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 170px;
+  height: 40px;
+  margin-right: 30px;
+  font-size: 11px;
+  box-sizing: border-box;
+  background: #40e17e;
+}
+
+.slide-item__button--outline {
+  background: transparent;
+  border: 2px solid #40e17e;
+}
+
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1.1s ease-in-out;
 }
 
 .fade-enter-from,
