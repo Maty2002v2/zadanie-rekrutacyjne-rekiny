@@ -8,7 +8,7 @@ import TheSlider from "./components/TheSlider.vue";
 
 import SliderSlide from "./types/SliderSlide";
 
-import "@/styles/globalStyles.css";
+import "@/styles/GlobalStyles.css";
 
 export default defineComponent({
   name: "App",

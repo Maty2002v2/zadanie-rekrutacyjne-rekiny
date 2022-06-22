@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="slider">
     <slider-slide-item :image="currentSlide" @nextSlide="nextSlide" />
   </div>
 </template>
@@ -34,3 +34,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.slider {
+  position: relative;
+  height: 600px;
+  padding-top: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+</style>

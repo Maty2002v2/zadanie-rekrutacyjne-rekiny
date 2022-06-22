@@ -1,5 +1,5 @@
 interface SliderSlide {
-  path: string;
+  nameImage: string;
   header: string;
   subheader: string;
   content: string;
