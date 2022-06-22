@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType, onBeforeUnmount } from "vue";
 
 import SliderSlide from "../types/SliderSlide";
 import SliderTimer from "./SliderTimer.vue";
@@ -40,9 +40,11 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    setInterval(() => {
+    const interval = setInterval(() => {
       emit("nextSlide"); //TODO:w destroy wyczyscic
     }, 5000);
+
+    onBeforeUnmount(() => clearInterval(interval));
   },
 });
 </script>
