@@ -31,6 +31,12 @@ export default defineComponent({
   animation: countdown 5s ease-in-out alternate;
 }
 
+@media screen and (max-width: 650px) {
+  .slider-timer {
+    width: 200px;
+  }
+}
+
 @keyframes countdown {
   0% {
     width: 100%;

@@ -17,10 +17,14 @@
       <p class="content__p">{{ image.content }}</p>
     </div>
 
-    <button class="slide-item__button">LOREM IPSUM</button>
-    <button class="slide-item__button slide-item__button--outline">
-      DOLOR SIT AMENT
-    </button>
+    <div class="button-container">
+      <button class="button-container__button">LOREM IPSUM</button>
+      <button
+        class="button-container__button button-container__button--outline"
+      >
+        DOLOR SIT AMENT
+      </button>
+    </div>
   </div>
 </template>
 
@@ -51,10 +55,9 @@ export default defineComponent({
 
 <style scoped>
 .slide-item {
-  width: 1000px;
+  width: 100%;
   color: #ffffff;
   font-weight: 900;
-  margin: 0 auto;
 }
 
 .slide-item__bg-img,
@@ -68,6 +71,7 @@ export default defineComponent({
 }
 
 .slide-item__bg-img {
+  object-fit: cover;
   opacity: 1;
   z-index: -1000;
 }
@@ -79,31 +83,41 @@ export default defineComponent({
 }
 
 .content__h1 {
-  margin-bottom: 5px;
-  font-size: 50px;
+  margin: 5px 0px;
   font-family: Work Sans;
+  font-size: 50px;
 }
 
 .content__h2 {
   margin: 0 0 15px 30px;
   font-family: Work Sans;
-  font-weight: 300;
   font-size: 30px;
+  font-weight: 300;
   letter-spacing: 3px;
 }
 
 .content__p {
-  font-weight: 200;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 650px;
+  overflow: hidden;
+
   font-size: 13px;
+  font-weight: 200;
   line-height: 25px;
 }
 
-.slide-item__button {
+.button-container {
+  display: flex;
+}
+
+.button-container__button {
   width: 170px;
   height: 40px;
   border: none;
   border-radius: 5px;
-  margin: 30px 30px 0 0;
+  margin: 30px 30px 0px 0px;
   box-sizing: border-box;
 
   color: #ffffff;
@@ -112,7 +126,7 @@ export default defineComponent({
   background: #40e17e;
 }
 
-.slide-item__button--outline {
+.button-container__button--outline {
   border: 2px solid #40e17e;
   background: transparent;
 }
@@ -125,5 +139,61 @@ export default defineComponent({
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .slide-item {
+    margin: 20px 30px 0px 0px;
+  }
+
+  .content__h1 {
+    font-size: 40px;
+  }
+
+  .content__h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .slide-item {
+    margin: 20px 30px 0px 0px;
+  }
+
+  .content__h1 {
+    font-size: 29px;
+    font-weight: 700;
+  }
+
+  .content__h2 {
+    font-size: 17px;
+    font-weight: 200;
+  }
+
+  .content__p {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    flex-direction: column-reverse;
+  }
+
+  .button-container__button {
+    width: 190px;
+    height: 55px;
+    margin: 20px 30px 0px 0px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .button-container__button--outline {
+    width: 220px;
+    border: 2px solid #40e17e;
+    background: transparent;
+  }
 }
 </style>

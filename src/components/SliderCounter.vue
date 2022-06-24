@@ -56,15 +56,10 @@ export default defineComponent({
 </script>
 
 <style>
-.slider-counter {
-  width: 1000px;
-  margin: 0 auto;
-}
-
 .slider-counter__span {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   margin-right: 10px;
 

@@ -43,8 +43,27 @@ export default defineComponent({
 <style scoped>
 .slider {
   position: relative;
+  width: 100%;
   height: 600px;
-  padding-top: 120px;
+  padding: 110px 0px 0px 190px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 870px) {
+  .slider {
+    padding: 110px 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .slider {
+    padding: 90px 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .slider {
+    padding: 80px 20px;
+  }
 }
 </style>

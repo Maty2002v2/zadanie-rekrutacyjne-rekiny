@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <nav class="container__navbar">MENU</nav>
-    <the-slider :images="FETCH_IMAGES" />
+    <the-slider class="container__slider" :images="FETCH_IMAGES" />
   </div>
 </template>
 
@@ -50,6 +50,11 @@ export default defineComponent({
 </script>
 
 <style>
+.container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .container__navbar {
   display: flex;
   justify-content: center;
@@ -58,11 +63,16 @@ export default defineComponent({
   box-sizing: border-box;
 
   color: #d8d8d8;
-  font-weight: 700;
   font-family: Work Sans;
   font-size: 20px;
+  font-weight: 700;
   letter-spacing: 1px;
 
   background: #eaeaea;
+}
+
+.container__slider {
+  display: flex;
+  flex-direction: column;
 }
 </style>
