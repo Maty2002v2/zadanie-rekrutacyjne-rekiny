@@ -49,15 +49,19 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
 .container__navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 29px;
+  padding: 26px;
+  box-sizing: border-box;
 
   color: #d8d8d8;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: Work Sans;
+  font-size: 20px;
+  letter-spacing: 1px;
 
   background: #eaeaea;
 }

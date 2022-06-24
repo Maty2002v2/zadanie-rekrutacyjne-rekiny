@@ -14,7 +14,7 @@
       <h1 class="content__h1">{{ image.header }}</h1>
       <h2 class="content__h2">{{ image.subheader }}</h2>
       <slider-timer :time="5" :key="image" />
-      <p>{{ image.content }}</p>
+      <p class="content__p">{{ image.content }}</p>
     </div>
 
     <button class="slide-item__button">LOREM IPSUM</button>
@@ -81,11 +81,21 @@ export default defineComponent({
 .content__h1 {
   margin-bottom: 5px;
   font-size: 50px;
+  font-family: Work Sans;
 }
 
 .content__h2 {
   margin: 0 0 15px 30px;
-  font-weight: 400;
+  font-family: Work Sans;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.content__p {
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 25px;
 }
 
 .slide-item__button {
