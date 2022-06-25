@@ -2,13 +2,13 @@
   <div class="slide-item">
     <Transition name="fade">
       <img
-        class="slide-item__bg-img"
+        :key="image.nameImage"
         :src="require('@/assets/' + image.nameImage)"
-        :key="image"
+        class="slide-item__bg-img"
         alt="slider backgraund"
       />
     </Transition>
-    <div class="slide-item__darkening" v-show="image"></div>
+    <div class="slide-item__darkening" v-show="image.nameImage"></div>
 
     <div class="content">
       <h1 class="content__h1">{{ image.header }}</h1>

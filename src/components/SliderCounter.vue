@@ -2,10 +2,10 @@
   <div class="slider-counter">
     <span
       v-for="(number, index) in numberOfSlides"
-      :key="number"
       :ref="setItemRef"
-      :class="{ 'slider-counter__span--active': index === 0 }"
+      :key="number"
       class="slider-counter__span"
+      :class="{ 'slider-counter__span--active': index === 0 }"
     ></span>
   </div>
 </template>
@@ -16,11 +16,11 @@ import { defineComponent, onBeforeUpdate, onUpdated } from "vue";
 export default defineComponent({
   name: "SliderCounter",
   props: {
-    numberOfSlides: {
+    currentSlideIndex: {
       type: Number,
       required: true,
     },
-    currentSlideIndex: {
+    numberOfSlides: {
       type: Number,
       required: true,
     },

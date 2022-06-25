@@ -1,8 +1,8 @@
 <template>
   <div class="slider">
     <slider-counter
-      :numberOfSlides="images.length"
       :currentSlideIndex="imageIndex"
+      :numberOfSlides="images.length"
     />
     <slider-slide-item :image="currentSlide" @nextSlide="nextSlide" />
   </div>
@@ -35,7 +35,7 @@ export default defineComponent({
 
     const currentSlide = computed(() => props.images[imageIndex.value]);
 
-    return { imageIndex, currentSlide, nextSlide };
+    return { currentSlide, imageIndex, nextSlide };
   },
 });
 </script>
