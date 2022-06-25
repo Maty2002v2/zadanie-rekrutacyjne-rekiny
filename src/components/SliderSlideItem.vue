@@ -8,7 +8,7 @@
         alt="slider backgraund"
       />
     </Transition>
-    <div class="slide-item__darkening"></div>
+    <div class="slide-item__darkening" v-show="image"></div>
 
     <div class="content">
       <h1 class="content__h1">{{ image.header }}</h1>
