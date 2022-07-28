@@ -1,4 +1,4 @@
-# rekiny-sukcesu
+# slider
 
 > Podgląd na żywo [_tutaj_](https://62e245dccc0fb65c42e02193--wonderful-sopapillas-a391cb.netlify.app/).
 
